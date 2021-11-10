@@ -40,7 +40,7 @@ try{
   }
 })
 
-router.route("/:likeVideoId")
+router.route("/:videoId")
 .get((req,res) => {
   let { likeVideo } = req
   likeVideo.__v = undefined
