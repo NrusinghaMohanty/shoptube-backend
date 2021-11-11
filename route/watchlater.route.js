@@ -9,7 +9,7 @@ router.route("/")
   .get(async (req, res) => {
     try {
       const watchLatervideos = await WatchLater.find({});
-      res.json({watchLatervideos})
+      res.json({success:true,watchLatervideos})
     } catch (err) {
       res.status(500).json({ success: false, message: "unable to get products", errorMessage: err.message })
     }

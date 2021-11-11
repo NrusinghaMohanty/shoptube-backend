@@ -9,7 +9,7 @@ router.route("/")
   .get(async (req, res) => {
     try {
       const history = await History.find({});
-      res.json({history})
+      res.json({success:true,history})
     } catch (err) {
       res.status(500).json({ success: false, message: "unable to get products", errorMessage: err.message })
     }
